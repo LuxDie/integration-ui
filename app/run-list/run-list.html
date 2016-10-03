@@ -1,0 +1,67 @@
+<table id="run-list" class="table table-hover">
+  <col>
+  <col>
+  <col>
+  <col>
+  <col>
+  <col>
+  <col>
+  <col>
+  <thead>
+  <tr>
+    <th></th>
+    <th>Changelist</th>
+    <th>Owner</th>
+    <th>Time Started</th>
+    <th>Build</th>
+    <th>Unit Test</th>
+    <th>Functional Test</th>
+    <th>Status</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="run-header" ng-repeat-start="run in runs" ng-click="toggleOpen($index)">
+    <td status-band></td>
+    <td>{{run.changelist}}</td>
+    <td>{{run.owner}}</td>
+    <td>{{run.started | date:'M/d/yyyy'}} <span class="glyphicon glyphicon-time"></span> {{run.started | date:'h:mm a'}}</td>
+    <td colspan="3">
+      <progress-bars></progress-bars>
+    </td>
+    <td rowspan="1"><status-icon code={{run.status}} type='status'></status-icon></td>
+  </tr>
+  <tr ng-repeat-end ng-hide="$index!==$parent.selected">
+    <td status-band></td>
+    <td colspan="6">
+      <div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="col-md-4">
+              <p><strong>Build <status-icon code={{run.build.status}}></status-icon></strong></p>
+              <span><span class="glyphicon glyphicon-time"></span> {{run.functional.ended | amDifference:run.functional.started | date:'mm:ss'}}</span>
+            </div>
+            <div class="col-md-4">
+              <span><status-icon code={{run.build.debug.status}} type='build'></status-icon>debug</span>
+            </div>
+            <div class="col-md-4">
+              <span><status-icon code={{run.build.release.status}} type='build'></status-icon>release</span>
+            </div>
+          </div>
+
+          <div class="col-md-1 divider"><span class="glyphicon glyphicon-menu-right"></span></div>
+
+          <div class="col-md-3">
+            <test-results title="'Unit'" suite="run.unit" statuses="statuses"></test-results>
+          </div>
+          
+          <div class="col-md-1 divider"><span class="glyphicon glyphicon-menu-right"></span></div>
+
+          <div class="col-md-4">
+            <test-results title="'Functional'" suite="run.functional" statuses="statuses"></test-results>
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

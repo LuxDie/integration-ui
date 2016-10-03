@@ -1,25 +1,159 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
 
-.menu:before {
-  content: "[";
+body {
+  padding: 0;
+  font-family: Calibri, sans-serif;
 }
 
-.menu:after {
-  content: "]";
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.menu > li {
-  display: inline;
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+  /* Make the masthead heading the same height as the navigation */
+}
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
 }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+}
+#run-list {
+  table-layout: fixed;
+  width: 1180px;
+  white-space: nowrap;
+}
+#run-list td {
+  overflow: hidden;
+}
+#run-list col:nth-of-type(1) {
+  width: 8px;
+}
+#run-list col:nth-of-type(2) {
+  width: 150px;
+}
+#run-list col:nth-of-type(3) {
+  width: 115px;
+}
+#run-list col:nth-of-type(4) {
+  width: 225px;
+}
+#run-list col:nth-of-type(5) {
+  width: 150px;
+}
+#run-list col:nth-of-type(6) {
+  width: 170px;
+}
+#run-list col:nth-of-type(7) {
+  width: 185px;
+}
+#run-list col:nth-of-type(8) {
+  width: 165px;
+}
+#run-list th:first-child {
+  background-color: #f5f5f5;
+}
+#run-list .run-header {
+  cursor: pointer;
+}
+#run-list .row {
+  height: 80px;
+}
+#run-list .percent {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#run-list .progress-bars {
+  position: relative;
+  width: 385px;
+  line-height: 1;
+}
+#run-list .progress-bars status-icon[code="2"] .glyphicon {
+  color: #f5f5f5;
+  background-color: #31708f;
+  padding: 6px;
+  font-size: 14px;
+}
+#run-list .progress-bars .icon {
+  position: absolute;
+  font-size: 25px;
+  z-index: 10;
+}
+#run-list .progress-bars .icon .glyphicon {
+  background-color: #f5f5f5;
+  border-radius: 50%;
+}
+#run-list .progress-bars .unit-bar .icon {
+  left: 186px;
+  top: 0;
+}
+#run-list .progress-bars .functional-bar .icon {
+  right: 0;
+  top: 0;
+}
+#run-list .progress-bars .blank {
+  font-size: 25px;
+}
+#run-list .progress-bars .blank .glyphicon {
+  color: #f5f5f5;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+}
+#run-list .progress {
+  position: absolute;
+  top: 10px;
+  height: 6px;
+  width: 50%;
+}
+#run-list .unit-bar .progress {
+  left: 50%;
+}
+#run-list status-icon[type="status"],
+#run-list status-icon[type="build"] {
+  font-size: 25px;
+}
+#run-list .divider .glyphicon {
+  margin-top: 32px;
+  color: #f5f5f5;
+  font-size: 25px;
 }

@@ -1,0 +1,20 @@
+<div class="progress-bars">
+  <div class="bar build-bar">
+    <span class="icon blank"><span class="glyphicon glyphicon-record"></span></span>
+    <status-icon class="icon" code={{run.build.status}} type="progress-bars"></status-icon>
+    <div class="progress">
+      <div class="progress-bar progress-bar-{{buildBar.context}} progress-bar-striped" role="progressbar" style="width: {{buildBar.width}}%"></div>
+    </div>
+  </div>
+  <div class="bar unit-bar">
+    <span class="icon blank"><span class="glyphicon glyphicon-record"></span></span>
+    <status-icon class="icon" code={{run.unit.status}} type="progress-bars" ng-if="run.build.status===4"></status-icon>
+    <div class="progress">
+      <div class="progress-bar progress-bar-{{unitBar.context}} progress-bar-striped" role="progressbar" style="width: {{unitBar.width}}%"></div>
+    </div>
+  </div>
+  <div class="bar functional-bar">
+    <span class="icon blank"><span class="glyphicon glyphicon-record"></span></span>
+    <status-icon class="icon" code={{run.functional.status}} type="progress-bars" ng-if="run.unit.status===4"></status-icon>
+  </div>
+</div>
