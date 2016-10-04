@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('myApp.runList', ['myApp.dataSource'])
+angular.module('myApp.runList', ['myApp.dataSource', 'myApp.ui'])
   .controller('RunListCtrl', function ($scope, runs, statuses) {
-    function passedPrct(passed, failed) {
-      let total = passed + failed;
+    function passedPrct(passed, skipped) {
+      let total = passed + skipped;
       if (total) {
         return Math.round(passed / total * 100);
       }
@@ -22,8 +22,8 @@ angular.module('myApp.runList', ['myApp.dataSource'])
         el.status = 3;
       }
 
-      el.unit.percent = passedPrct(el.unit.passed, el.unit.failed);
-      el.functional.percent = passedPrct(el.functional.passed, el.functional.failed);
+      el.unit.percent = passedPrct(el.unit.passed, el.unit.skipped);
+      el.functional.percent = passedPrct(el.functional.passed, el.functional.skipped);
 
     });
 

@@ -16,10 +16,10 @@ angular.module('myApp.dataSource')
   "0": {
     "text": "Pending",
     "icon": {
-      "small": "option-horizontal",
-      "big": "option-horizontal",
-      "full": "option-horizontal",
-      "square": "option-horizontal",
+      "small": "question-sign",
+      "big": "question-sign",
+      "full": "question-sign",
+      "square": "question-sign",
       "folder": ""
     },
     "context": "warning"

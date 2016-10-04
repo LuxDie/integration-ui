@@ -9,7 +9,7 @@
   </div>
   <div class="col-md-4" ng-if="suite.status===4">
     <p><span class="glyphicon glyphicon-stop text-success"></span> {{suite.passed}}</p>
-    <p><span class="glyphicon glyphicon-stop text-warning"></span> {{suite.failed}}</p>
-    <p><span class="glyphicon glyphicon-time"></span> {{suite.ended | amDifference:suite.started | date:'mm:ss'}}</p>
+    <p><span class="glyphicon glyphicon-stop text-warning"></span> {{suite.skipped}}</p>
+    <p title="Time elapsed"><span class="glyphicon glyphicon-time"></span> {{suite.ended | amDifference:suite.started | date:'mm:ss'}}</p>
   </div>
 </div>

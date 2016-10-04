@@ -154,6 +154,6 @@ body {
 }
 #run-list .divider .glyphicon {
   margin-top: 32px;
-  color: #f5f5f5;
+  color: gray;
   font-size: 25px;
 }

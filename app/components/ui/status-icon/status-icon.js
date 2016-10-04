@@ -1,15 +1,9 @@
 'use strict';
 
-/**
- * @ngdoc directive
- * @name crossoverTestApp.directive:statusIcon
- * @description
- * # statusIcon
- */
-angular.module('crossoverTestApp')
+angular.module('myApp.ui.statusIcon', [])
   .directive('statusIcon', function () {
     return {
-      template: '<span class="text-{{contextClass}}"><span class="glyphicon glyphicon-{{icon}}"></span> {{text}}</span>',
+      template: '<span class="text-{{contextClass}}" title="{{title}}"><span class="glyphicon glyphicon-{{icon}}"></span> {{text}}</span>',
       restrict: 'E',
       scope: true,
       link: function postLink(scope, element, attrs) {
@@ -32,6 +26,7 @@ angular.module('crossoverTestApp')
           }
         }
         scope.contextClass = scope.statuses[code].context;
+        scope.title = scope.statuses[code].text;
       }
     };
   });

@@ -26,7 +26,7 @@
     <td>{{run.owner}}</td>
     <td>{{run.started | date:'M/d/yyyy'}} <span class="glyphicon glyphicon-time"></span> {{run.started | date:'h:mm a'}}</td>
     <td colspan="3">
-      <progress-bars></progress-bars>
+      <progress-bar></progress-bar>
     </td>
     <td rowspan="1"><status-icon code={{run.status}} type='status'></status-icon></td>
   </tr>
@@ -38,7 +38,7 @@
           <div class="col-md-3">
             <div class="col-md-4">
               <p><strong>Build <status-icon code={{run.build.status}}></status-icon></strong></p>
-              <span><span class="glyphicon glyphicon-time"></span> {{run.functional.ended | amDifference:run.functional.started | date:'mm:ss'}}</span>
+              <span title="Time elapsed"><span class="glyphicon glyphicon-time"></span> {{run.functional.ended | amDifference:run.functional.started | date:'mm:ss'}}</span>
             </div>
             <div class="col-md-4">
               <span><status-icon code={{run.build.debug.status}} type='build'></status-icon>debug</span>
@@ -51,17 +51,18 @@
           <div class="col-md-1 divider"><span class="glyphicon glyphicon-menu-right"></span></div>
 
           <div class="col-md-3">
-            <test-results title="'Unit'" suite="run.unit" statuses="statuses"></test-results>
+            <test-results suite="run.unit" statuses="statuses"></test-results>
           </div>
           
           <div class="col-md-1 divider"><span class="glyphicon glyphicon-menu-right"></span></div>
 
           <div class="col-md-4">
-            <test-results title="'Functional'" suite="run.functional" statuses="statuses"></test-results>
+            <test-results suite="run.functional" statuses="statuses"></test-results>
           </div>
         </div>
       </div>
     </td>
+    <td></td>
   </tr>
   </tbody>
 </table>

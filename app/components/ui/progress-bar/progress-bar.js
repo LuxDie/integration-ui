@@ -1,15 +1,9 @@
 'use strict';
 
-/**
- * @ngdoc directive
- * @name crossoverTestApp.directive:progressBars
- * @description
- * # progressBars
- */
-angular.module('crossoverTestApp')
-  .directive('progressBars', function () {
+angular.module('myApp.ui.progressBar', [])
+  .directive('progressBar', function () {
     return {
-      templateUrl: 'views/progress-bars.html',
+      templateUrl: 'components/ui/progress-bar/progress-bar.html',
       restrict: 'E',
       link: function postLink(scope) {
         function barWidth (status) {

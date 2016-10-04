@@ -1,12 +1,6 @@
 'use strict';
 
-/**
- * @ngdoc directive
- * @name crossoverTestApp.directive:statusBand
- * @description
- * # statusBand
- */
-angular.module('crossoverTestApp')
+angular.module('myApp.ui.statusBand', [])
   .directive('statusBand', function () {
     return {
       template: '<div></div>',

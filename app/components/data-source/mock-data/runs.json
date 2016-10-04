@@ -16,14 +16,14 @@
     "unit": {
       "status": 4,
       "passed": 342,
-      "failed": 3,
+      "skipped": 3,
       "started": "2015-12-07T19:49:38.715Z",
       "ended": "2015-12-07T19:51:55.715Z"
     },
     "functional": {
       "status": 4,
       "passed": 14321,
-      "failed": 2000,
+      "skipped": 2000,
       "started": "2015-12-07T19:52:38.715Z",
       "ended": "2015-12-07T19:55:38.715Z"
     }
@@ -45,14 +45,14 @@
     "unit": {
       "status": 1,
       "passed": 1,
-      "failed": 1,
+      "skipped": 1,
       "started": "2015-12-07T19:49:38.715Z",
       "ended": "2015-12-07T19:51:55.715Z"
     },
     "functional": {
       "status": 1,
       "passed": 1,
-      "failed": 1,
+      "skipped": 1,
       "started": "2015-12-07T19:49:38.715Z",
       "ended": "2015-12-07T19:51:55.715Z"
     }
@@ -74,14 +74,14 @@
     "unit": {
       "status": 2,
       "passed": 342,
-      "failed": 3,
+      "skipped": 3,
       "started": "2015-12-07T19:49:38.715Z",
       "ended": "2015-12-07T19:51:55.715Z"
     },
     "functional": {
       "status": 0,
       "passed": 14321,
-      "failed": 2000,
+      "skipped": 2000,
       "started": "2015-12-07T19:49:38.715Z",
       "ended": "2015-12-07T19:51:55.715Z"
     }
@@ -103,14 +103,14 @@
     "unit": {
       "status": 4,
       "passed": 342,
-      "failed": 3,
+      "skipped": 3,
       "started": "2015-12-07T19:49:38.715Z",
       "ended": "2015-12-07T19:51:55.715Z"
     },
     "functional": {
       "status": 0,
       "passed": 14321,
-      "failed": 2000,
+      "skipped": 2000,
       "started": "2015-12-07T19:49:38.715Z",
       "ended": "2015-12-07T19:51:55.715Z"
     }
