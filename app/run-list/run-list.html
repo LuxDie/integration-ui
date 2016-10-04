@@ -41,10 +41,14 @@
               <span title="Time elapsed"><span class="glyphicon glyphicon-time"></span> {{run.functional.ended | amDifference:run.functional.started | date:'mm:ss'}}</span>
             </div>
             <div class="col-md-4">
-              <span><status-icon code={{run.build.debug.status}} type='build'></status-icon>debug</span>
+              <span><status-icon code={{run.build.debug.status}} type='build'></status-icon>
+                <br>Debug
+              </span>
             </div>
             <div class="col-md-4">
-              <span><status-icon code={{run.build.release.status}} type='build'></status-icon>release</span>
+              <span><status-icon code={{run.build.release.status}} type='build'></status-icon>
+                <br>Release
+              </span>
             </div>
           </div>
 
