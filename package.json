@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "integration-ui",
   "private": true,
   "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "description": "Integration UI Example",
+  "repository": "https://github.com/LuxDie/integration-ui",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",
